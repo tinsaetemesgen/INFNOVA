@@ -1,23 +1,23 @@
-import { Link } from "react-router-dom";
-import infnovalogo from '../../assets/icons/infnovalogo.png'
+import { Link } from 'react-router-dom';
+import Logo from '../../assets/icons/infnovalogo.png'
 
-function Navbar() {
-   return (
-     <nav>
-        <img src={infnovalogo} alt="Infnova Logo" className="logo" />
-        
-        <ul>
-            <li><a href="">Courses</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-
-        <div className="additional-links">
-            <a href="">Sign in</a>
-            <a href="" className="enroll-now">Enroll Now</a>
-        </div>
-        
-    </nav>
-   )
+export default function Navbar() {
+    return (
+        <nav className="navbar">
+            <div className="navbar-logo">
+                <Link to="/">
+                <img src={Logo} alt="INFNOVA LOGO" />
+                </Link>
+            </div> 
+            <ul className="navbar-links">
+                <li><Link to="/" >Courses</Link></li>
+                <li><Link to="/" >About</Link></li>
+                <li><Link to="/" >Contact</Link></li>
+            </ul>
+            <div className="additional-links">
+                <a href="/">Sign In</a>
+                <a href="/" className="enroll-now-btn">Enroll Now</a>
+            </div>
+        </nav>
+    )
 }
-export default Navbar

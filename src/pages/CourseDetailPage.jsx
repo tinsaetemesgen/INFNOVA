@@ -1,12 +1,7 @@
 
-import Navbar from "./components/layout/Navbar"
 
-function CourseDetailPage() {
-    return (
-      <>
-      <Navbar />
-      </>
-    )
+export default function CourseDetailPage() {
+  return (
+    <h1></h1>
+  ) 
 }
-
-export default CourseDetailPage

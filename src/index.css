@@ -1,116 +1,181 @@
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 0.4s;
 }
+
+
 
 html {
     scroll-behavior: smooth;
-    font-family: system-ui,'Helvetica Neue', sans-serif;
+    font-family: sans-serif;
     background-color: #eae9e9;
 }
 
-nav {
+/* Navbar Styles */
+
+.navbar {
     width: 100%;
-    padding: 18px;
-    justify-content: space-between;
+    position: fixed;
     display: flex;
     align-items: center;
-    background-color: #eae9e9;
+    justify-content: space-between;
+    padding: 16px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    z-index: 100;
 }
 
-nav .logo {
-    width: 12rem;
+.navbar-logo img {
+    height: 40px;
+    object-fit: contain;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 4rem;
-}
-
-nav ul li a {
-    font-size: 1.4rem;
-    color: rgb(58, 57, 57);
-    text-decoration: none;
-    transition: 0.3s;
-}
-nav ul li a:hover {
-    color: rgba(0, 0, 0, 0.3);
-}
-
-nav .additional-links {
+.navbar-links {
     display: flex;
     gap: 32px;
+    list-style: none;
 }
 
-nav .additional-links a {
-    font-size: 1.4rem;
-    color: rgb(255, 81, 0);
+.navbar-links a {
     text-decoration: none;
-    transition: 0.3s;
-}
-nav .additional-links a:hover {
-    color: rgb(255, 102, 0, 0.6);
+    color: #1a1a1a;
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.2s ease;
 }
 
-nav a.enroll-now {
-    background-color:  rgb(255, 102, 0);
-    padding: 8px 8px;
-    color: #eae9e9;
-    align-self: center;
-    border-radius: 10px;
+.navbar-links a:hover {
+    color: rgba(26, 26, 26, 0.6);
 }
-nav a.enroll-now:hover {
-    background-color:  rgb(255, 102, 0, 0.8);
+
+
+.additional-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.additional-links a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(245, 73, 0, 1);
+}
+
+.additional-links a:hover {
+    color: rgba(245, 73, 0, 0.7);
+}
+
+.additional-links a.enroll-now-btn {
+    background-color: rgba(245, 73, 0, 1);
+    padding: 10px 18px;
     color: #ffffff;
+    font-weight: 600;
+    border-radius: 8px;
 }
 
-.hero {
+.additional-links a.enroll-now-btn:hover {
+    background-color: rgba(245, 73, 0, 0.7);
+}
+
+
+/* Home Hero Section*/
+ 
+main.home {
     width: 100%;
+    height: 100vh;
+}
+
+section.home-hero {
     display: flex;
+    background: linear-gradient(180deg, rgba(245, 73, 0, 1), rgba(255, 105, 0, 1));
     flex-direction: column;
-    background-color: rgb(255, 102, 0);
+    justify-content: center;
+    padding: 0 20px;
 }
 
-.hero h1 {
-    font-size: 3.4rem;
-    color: #eae9e9;
-    margin: 4rem 0 1rem 2rem;
-    font-weight: 600;
+.home-heading {
+    font-size: 4rem;
+    color: #ffffff;
+    margin-top: 8rem;
+    margin-bottom: 1rem;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    color: #eae9e9;
-    font-weight: 600;
-    margin-left: 2rem;
-    margin-bottom: 4rem;
-    line-height: 2rem;
+.home-intro {
+    font-size: 1.5rem;
+    color: #ffffff;
+    max-width: 600px;
+    line-height: 1.6;
+    margin: 1rem 0 4rem;
 }
 
-.search-container {
+.search-bar {
     width: 95%;
-    background: #f3f1f1;
+    margin: 2rem 0 0 2rem;
+    padding: 2rem 1.5rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar .search-input {
+    width: 60%;
+    padding: 1rem 1rem;
+    border: 1px solid #808080;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.search-bar .non-input {
+    width: 20%;
+    padding: 1rem 1rem;
+    border: 1px solid #808080;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.search-bar .non-input.one {
+    margin-left: 2rem;
+    width: 16rem;
+    margin-right: 2rem;
+}
+.search-input, .non-input::placeholder {
+    color: #a9a9a9;
+}
+
+/* Couses list section */
+
+section.courses-list {
+    width: 100%;
+    padding: 2rem 2rem 0;
+}
+
+.courses-list h2 {
+    font-size: 1.5rem;
+    color: #858484;
+}
+
+.courses-list h2 span {
+    color: #1a1a1a;
+}
+
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
     margin-top: 1rem;
-    display: flex;
-    border-radius: 10px;
-    box-shadow: 1px 2px 4px rgba(162, 160, 160, 0.3);
+    flex-wrap: wrap;
 }
 
-.search-container .search-icon {
-    width: 22px;
-    font-size: 1.2rem;
-}
-
-.search-container .search-input {
-    width: 32rem;
-    height: 3rem;
-    font-size: 1.3rem;
+.course-card {
+    width: 329.6px;
+    height: 25.3rem;
+    background-color: #ffffff;
     border-radius: 10px;
-    background-color: #f3f1f1;
-    border: 1px solid #a2a0a0;
-    margin: 2rem;
-    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
 }
 
