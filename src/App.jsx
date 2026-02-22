@@ -6,16 +6,18 @@ import Navbar from './components/layout/Navbar';
 
 function App() { 
     return (
-      <>
       <div className="app">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<CoursesPage />} />
-          <Route path="/details" element={<CourseDetailPage />} />
-        </Routes>
+        <div style={{ paddingTop: '80px' }}> 
+          <Routes>
+            <Route path="/" element={<CoursesPage />} />
+            <Route path="/details" element={<CourseDetailPage />} /> 
+          </Routes>
+        </div>
       </div>
-      </>
     )
 }
 
 export default App
+
+

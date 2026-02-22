@@ -10,9 +10,9 @@ export default function Navbar() {
                 </Link>
             </div> 
             <ul className="navbar-links">
-                <li><Link to="/" >Courses</Link></li>
-                <li><Link to="/" >About</Link></li>
-                <li><Link to="/" >Contact</Link></li>
+                <li><Link to="/details">Courses</Link></li>
+                <li><Link to="/">About</Link></li>
+                <li><Link to="/">Contact</Link></li>
             </ul>
             <div className="additional-links">
                 <a href="/">Sign In</a>
